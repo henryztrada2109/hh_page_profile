@@ -1,0 +1,173 @@
+:root {
+
+    --secondary-primary: #002050;
+    --secondary-color: #86E9FF;
+    --font-color: #494949;
+    --branch-color: #878787;
+
+}
+
+* {
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: #494949;
+}
+
+section {
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    z-index: 0;
+}
+
+.return {
+    margin-right: 2rem;
+    position: relative;
+    z-index: 99;
+}
+
+.return i {
+    color: #fff;
+}
+
+.pattern {
+    background: url(../assets/pattern.png) no-repeat;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    z-index: 1;
+}
+
+.header, .info {
+    position: relative;
+    z-index: 1;
+}
+
+.header {
+    background-color: var(--secondary-primary);
+}
+
+.header .pattern {
+    opacity: .15;
+}
+
+.header .header__container, .info {
+    padding: 6rem;
+}
+
+.header h1 {
+    font-size: 2.2rem;
+    margin-bottom: 2rem;
+}
+
+.header h1, p {
+    color: #fff;
+    text-align: justify;
+}
+
+.header__bottom {
+    position: absolute;
+    bottom: -90px;
+    width: 100%; 
+    height: 0; 
+    border-left: 100vw solid var(--secondary-primary);
+    border-top: 72px solid transparent;
+    border-bottom: 90px solid transparent;
+}
+
+.info {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-gap: 16px;
+    grid-auto-rows: minmax(100px, auto);
+    margin-top: 2rem;
+}
+
+.info .repositories,
+.info .technologies {
+    padding-left: 10rem;
+}
+
+.info .repositories .title-container,
+.info .technologies .title-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+.info .repositories .title-container i,
+.info .technologies .title-container i {
+    font-size: 2.5rem;
+    color: var(--secondary-primary);
+}
+
+.info .repositories .title-container h2,
+.info .technologies .title-container h2 {
+    margin-left: 2rem;
+    font-weight: 500;
+    color: var(--secondary-primary);
+}
+
+.info .repositories .info__items p::after {
+    content: '';
+    width: 20px;
+    height: 3.2rem;
+    border-left: 2px solid var(--branch-color);
+    border-bottom: 2px solid var(--branch-color);
+    display: block;
+    position: relative;
+    left: -2.8rem;
+    top: -4rem;
+    top: -4rem;
+}
+
+.info .repositories .info__items p::before {
+    content: '';
+    width: 8px;
+    height: 8px;
+    background-color: var(--branch-color);
+    position: relative;
+    display: block;
+    border-radius: 100%;
+    left: -1.5rem;
+    top: 1.3rem;
+}
+
+.info .technologies .info__items p::after {
+    content: '';
+    width: 2px;
+    height: 2.8rem;
+    background-color: var(--branch-color);
+    display: block;
+    position: relative;
+    left: -2.8rem;
+    top: -3.8rem;
+}
+
+.info .technologies .info__items p::before {
+    content: '';
+    width: 8px;
+    height: 8px;
+    background-color: var(--branch-color);
+    position: relative;
+    display: block;
+    border-radius: 100%;
+    left: -3rem;
+    top: 1.2rem;
+}
+
+.info .info__items {
+    padding-left: 4rem;
+    margin-top: 1rem;
+}
+
+.info .info__items p {
+    color: var(--font-color);
+    font-size: 1.2rem;
+    font-weight: 500;
+    height: 50px;
+}

@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Porfolio</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,7 +12,6 @@
         rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
-    </style>
 </head>
 
 <body>
@@ -24,10 +23,11 @@
             <h3>Full-Stack</h3>
 
             <div class="social__network">
-                <a href="http://" target="_blank" rel="noopener noreferrer" class="github">
+                <a href="https://github.com/henryztrada2109" target="_blank" rel="noopener noreferrer" class="github">
                     <i class="fa-brands fa-square-github"></i>
                 </a>
-                <a href="http://" target="_blank" rel="noopener noreferrer" class="linkedin">
+                <a href="https://www.linkedin.com/in/henry-leonel-hernandez-estrada-02344496/" target="_blank"
+                    rel="noopener noreferrer" class="linkedin">
                     <i class="fa-brands fa-linkedin"></i>
                 </a>
             </div>
@@ -40,10 +40,108 @@
         <div class="about_container">
             <div class="image__profile"></div>
             <p class="about_description">
-                Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen.cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen 
+                Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido
+                el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona
+                que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró
+                hacer un libro de textos especimen.cuando un impresor (N. del T. persona que se dedica a la imprenta)
+                desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos
+                especimen
             </p>
+        </div>
+
+        <h1>Projects</h1>
+
+        <div class="carousel-container">
+            <div class="inner-carousel">
+                <div class="track">
+                    <div class="card-container">
+                        <a href="pages/project-1.html">
+                            <div class="card card1"></div>
+                            <p>Project number</p>
+                        </a>
+                    </div>
+                    <div class="card-container">
+                        <div class="card card2"></div>
+                        <p>Project number</p>
+                    </div>
+                    <div class="card-container">
+                        <div class="card card3"></div>
+                        <p>Project number</p>
+                    </div>
+                    <div class="card-container">
+                        <div class="card card4"></div>
+                        <p>Project number</p>
+                    </div>
+                    <div class="card-container">
+                        <div class="card card5"></div>
+                        <p>Project number</p>
+                    </div>
+                    <div class="card-container">
+                        <div class="card card6"></div>
+                        <p>Project number</p>
+                    </div>
+                    <div class="card-container">
+                        <div class="card card7"></div>
+                        <p>Project number</p>
+                    </div>
+                    <div class="card-container">
+                        <div class="card card8"></div>
+                        <p>Project number</p>
+                    </div>
+                    <div class="card-container">
+                        <div class="card card9"></div>
+                        <p>Project number</p>
+                    </div>
+                    <div class="card-container">
+                        <div class="card card10"></div>
+                        <p>Project number</p>
+                    </div>
+                    <div class="card-container">
+                        <div class="card card11"></div>
+                        <p>Project number</p>
+                    </div>
+                    <div class="card-container">
+                        <div class="card card12"></div>
+                        <p>Project number</p>
+                    </div>
+                </div>
+                <div class="nav">
+                    <button class="prev"><i class="fas fa-chevron-left fa-2x"></i></button>
+                    <button class="next"><i class="fas fa-chevron-right fa-2x"></i></button>
+                </div>
+            </div>
         </div>
     </section>
 </body>
+<script>
+    const prev = document.querySelector(".prev");
+    const next = document.querySelector(".next");
+    const carousel = document.querySelector(".carousel-container");
+
+    const track = document.querySelector(".track");
+    let width = carousel.offsetWidth;
+    let index = 0;
+    window.addEventListener("resize", function () {
+        width = carousel.offsetWidth;
+    });
+    next.addEventListener("click", function (e) {
+        e.preventDefault();
+        index = index + 1;
+        prev.classList.add("show");
+        track.style.transform = "translateX(" + index * -width + "px)";
+        if (track.offsetWidth - index * width < index * width) {
+            next.classList.add("hide");
+        }
+    });
+    prev.addEventListener("click", function () {
+        index = index - 1;
+        next.classList.remove("hide");
+        if (index === 0) {
+            prev.classList.remove("show");
+        }
+        track.style.transform = "translateX(" + index * -width + "px)";
+    });
+
+</script>
 
 </html>
