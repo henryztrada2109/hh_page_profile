@@ -11,6 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="vivify.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
 </head>
 
@@ -18,11 +19,11 @@
     <section class="profile">
         <div class="pattern profile_pattern"></div>
         <div class="profile__container">
-            <div class="image__profile"></div>
-            <h1>Henry Hernandez</h1>
-            <h3>Full-Stack</h3>
+            <div class="image__profile vivify fadeInTop"></div>
+            <h1 class="vivify fadeInBottom">Henry Hernandez</h1>
+            <h3 class="vivify fadeInBottom">Full-Stack</h3>
 
-            <div class="social__network">
+            <div class="social__network vivify popIn">
                 <a href="https://github.com/henryztrada2109" target="_blank" rel="noopener noreferrer" class="github">
                     <i class="fa-brands fa-square-github"></i>
                 </a>
@@ -113,6 +114,7 @@
         </div>
     </section>
 </body>
+
 <script>
     const prev = document.querySelector(".prev");
     const next = document.querySelector(".next");
