@@ -16,7 +16,7 @@
 .pattern {
     background: url(assets/pattern.png) no-repeat;
     background-size: cover;
-    width: 100vw;
+    width: 100%;
     height: 100vh;
 }
 
@@ -31,7 +31,7 @@
 
 section {
     height: 100vh;
-    width: 100vw;
+    width: 100%;
     position: relative;
     z-index: 1;
 }
@@ -45,15 +45,9 @@ section {
 
 .about {
     width: auto;
-    height: calc(100vh - 6rem);
+    height: 100%;
     background-color: #F1F7FF;
     padding: 3rem 8rem 3rem 8rem;
-}
-
-@media (max-width: 1366px) {
-    .about {
-        height: 100%;
-    }
 }
 
 /* PROFILE */
