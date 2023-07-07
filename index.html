@@ -58,13 +58,17 @@
                 <div class="track">
                     <div class="card-container">
                         <a href="pages/project-page-profile.html">
-                            <div class="card card1"></div>
+                            <div class="card card1">
+                                <i class="fas fa-address-card fa-2x"></i>
+                            </div>
                             <p>Page Profile</p>
                         </a>
                     </div>
                     <div class="card-container">
                         <a href="pages/project-devops.html">
-                            <div class="card card2"></div>
+                            <div class="card card2">
+                                <i class="fas fa-cubes fa-2x"></i>
+                            </div>
                             <p>DevOps</p>
                         </a>
                     </div>
@@ -82,6 +86,10 @@
     const prev = document.querySelector(".prev");
     const next = document.querySelector(".next");
     const carousel = document.querySelector(".carousel-container");
+    const cardContainer = document.querySelectorAll('.card-container');
+
+    if (cardContainer.length > 6)
+        next.classList.add("show");
 
     const track = document.querySelector(".track");
     let width = carousel.offsetWidth;
@@ -90,6 +98,7 @@
 
     window.addEventListener("resize", function () {
         width = carousel.offsetWidth;
+        console.log(width, 'width')
     });
     next.addEventListener("click", function (e) {
         e.preventDefault();
@@ -97,6 +106,9 @@
         prev.classList.add("show");
 
         track.style.transform = "translateX(" + index * -width + "px)";
+
+        console.log(index * width)
+        console.log(initValue)
 
         if (index * width > initValue) {
             next.classList.add("hide");

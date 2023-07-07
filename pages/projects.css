@@ -178,6 +178,8 @@ section {
 .info .info__items {
     padding-left: 4rem;
     margin-top: 1rem;
+    position: relative;
+    z-index: 0;
 }
 
 .info .info__items p {
