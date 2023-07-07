@@ -139,6 +139,7 @@ h3 {
 .inner-carousel {
     width: 100%;
     overflow: hidden;
+    text-align: center;
 }
 
 .track {
