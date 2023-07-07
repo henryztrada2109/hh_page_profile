@@ -21,8 +21,8 @@
 }
 
 .image__profile {
-    background: url(assets/profile.png) no-repeat;
-    background-size: cover;
+    background: url(assets/profile.png) no-repeat center;
+    background-size: 105%;
     width: 300px;
     height: 300px;
     margin: 0 auto 5rem auto;
@@ -107,6 +107,7 @@ h3 {
 .about_container {
     display: flex;
     padding-bottom: 5rem;
+    align-items: center;
 }
 
 .about_container .image__profile {
@@ -115,11 +116,13 @@ h3 {
 
 .about_container .about_description {
     width: 70%;
+    height: 100%;
     background-color: #fff;
     padding: 3rem;
     border-radius: 16px;
     box-shadow: 1px 3px 20px -10px rgba(0, 0, 0, 0.25);
     margin-left: 5rem;
+    text-align: justify;
 }
 
 /* CARROUSEL */
@@ -223,4 +226,47 @@ h3 {
 
 .nav .next.hide {
     display: none;
+}
+
+@media (max-width: 1365px) {
+    .about {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .about h1 {
+        text-align: center;
+        font-size: 2.2rem;
+    }
+
+    .about .about_container {
+        display: block;
+    }
+
+    .about .about_container .image__profile {
+        margin-bottom: 2rem;
+    }
+
+    .about .about_container .about_description {
+        width: 90%;
+        margin: auto;
+    }
+
+    /* CARROUSEL */
+
+    .carousel-container {
+        width: 70%;
+    }
+
+    .carousel-container .nav .prev {
+        left: -65px;
+    }
+    
+    .carousel-container .nav .next {
+        right: -65px;
+    }
+
+    .carousel-container .card-container {
+        width: auto;
+    }
 }

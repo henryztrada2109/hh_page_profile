@@ -186,3 +186,22 @@ section {
     font-weight: 500;
     height: 50px;
 }
+
+@media (max-width: 1365px) {
+    .return {
+        display: block;
+    }
+
+    .info {
+        display: block;
+    }
+
+    .info .repositories {
+        margin-bottom: 2rem;
+    }
+
+    .info .repositories,
+    .info .technologies {
+        padding: 0;
+    }
+}

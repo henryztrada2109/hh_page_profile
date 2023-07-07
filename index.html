@@ -58,52 +58,52 @@
                     <div class="card-container">
                         <a href="pages/project-1.html">
                             <div class="card card1"></div>
-                            <p>Project number</p>
+                            <p>Project number1</p>
                         </a>
                     </div>
                     <div class="card-container">
                         <div class="card card2"></div>
-                        <p>Project number</p>
+                        <p>Project number 2</p>
                     </div>
                     <div class="card-container">
                         <div class="card card3"></div>
-                        <p>Project number</p>
+                        <p>Project number 3</p>
                     </div>
                     <div class="card-container">
                         <div class="card card4"></div>
-                        <p>Project number</p>
+                        <p>Project number 4</p>
                     </div>
                     <div class="card-container">
                         <div class="card card5"></div>
-                        <p>Project number</p>
+                        <p>Project number 5</p>
                     </div>
                     <div class="card-container">
                         <div class="card card6"></div>
-                        <p>Project number</p>
+                        <p>Project number 6</p>
                     </div>
                     <div class="card-container">
                         <div class="card card7"></div>
-                        <p>Project number</p>
+                        <p>Project number 7</p>
                     </div>
                     <div class="card-container">
                         <div class="card card8"></div>
-                        <p>Project number</p>
+                        <p>Project number 8</p>
                     </div>
                     <div class="card-container">
                         <div class="card card9"></div>
-                        <p>Project number</p>
+                        <p>Project number 9</p>
                     </div>
                     <div class="card-container">
                         <div class="card card10"></div>
-                        <p>Project number</p>
+                        <p>Project number 10</p>
                     </div>
                     <div class="card-container">
                         <div class="card card11"></div>
-                        <p>Project number</p>
+                        <p>Project number 11</p>
                     </div>
                     <div class="card-container">
                         <div class="card card12"></div>
-                        <p>Project number</p>
+                        <p>Project number 12</p>
                     </div>
                 </div>
                 <div class="nav">
@@ -123,6 +123,8 @@
     const track = document.querySelector(".track");
     let width = carousel.offsetWidth;
     let index = 0;
+    const initValue = (track.offsetWidth - index * width) - width;
+
     window.addEventListener("resize", function () {
         width = carousel.offsetWidth;
     });
@@ -130,8 +132,10 @@
         e.preventDefault();
         index = index + 1;
         prev.classList.add("show");
+        
         track.style.transform = "translateX(" + index * -width + "px)";
-        if (track.offsetWidth - index * width < index * width) {
+
+        if (index * width > initValue) {
             next.classList.add("hide");
         }
     });
