@@ -188,6 +188,11 @@ section {
 }
 
 @media (max-width: 1365px) {
+    .header__container, .info {
+        padding-left: 3rem !important;
+        padding-right: 3rem !important;
+    }
+
     .return {
         display: block;
     }
