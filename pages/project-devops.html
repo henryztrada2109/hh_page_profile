@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DevOps</title>
+    <title>DevOps Environment</title>
     <link rel="icon" type="image/x-icon" href="../assets/icon.ico" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -27,20 +27,15 @@
                     <a href="../index.html#projects" class="return">
                         <i class="fa-solid fa-arrow-left"></i>
                     </a>
-                    Project one
+                    DevOps Environment
                 </h1>
 
                 <p class="vivify fadeIn delay-100">
-                    Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha
-                    sido
-                    el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T.
-                    persona
-                    que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que
-                    logró
-                    hacer un libro de textos especimen.cuando un impresor (N. del T. persona que se dedica a la
-                    imprenta)
-                    desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos
-                    especimen
+                    Project with specific cloudformation templates, which publishes an environment for continuous
+                    integration of any project, for this it relies on 2 tools, Jenkins as the organizer of the
+                    integration and continuous deployment, and SonarQube for the code review of the projects.
+                    The templates contained here can be configured for the required load level, since the
+                    t2.micro instance type is used by default, but it can be changed to any type that is changed.
                 </p>
             </div>
             <div class="header__bottom"></div>
@@ -52,19 +47,22 @@
                     <h2>Repositories</h2>
                 </div>
                 <div class="info__items">
-                    <p class="vivify fadeIn delay-50">auth-project</p>
-                    <p class="vivify fadeIn delay-200">admin-project</p>
+                    <a href="https://github.com/henryztrada2109/devops.git" class="return" target="_blank">
+                        <p class="vivify fadeIn delay-50">Project</p>
+                    </a>
                 </div>
             </div>
             <div class="technologies">
                 <div class="title-container">
                     <i class="fa-solid fa-cube"></i>
-                    <h2>Repositories</h2>
+                    <h2>Technologies</h2>
                 </div>
                 <div class="info__items">
-                    <p class="vivify fadeIn delay-50">Typescript</p>
-                    <p class="vivify fadeIn delay-200">Lambdas</p>
-                    <p class="vivify fadeIn delay-350">Angular</p>
+                    <p class="vivify fadeIn delay-200">CloudFormation</p>
+                    <p class="vivify fadeIn delay-350">Docker</p>
+                    <p class="vivify fadeIn delay-350">AWS EC2</p>
+                    <p class="vivify fadeIn delay-350">Jenkins</p>
+                    <p class="vivify fadeIn delay-350">Sonar</p>
                 </div>
             </div>
         </div>
